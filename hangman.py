@@ -19,38 +19,48 @@ def game():
     print("\n Bem-Vindo ao Jogo da Forca do Brasileirão 2024")
     print("\n Advinhe a palavra abaixo:\n")
 
+    #Definir a lista de palavras possíveis
     palavras = ["são paulo", "corinthians", "flamengo", "santos", "palmeiras", "vasco"]
-
+    
+    #Escolher uma palavra aleatória da lista 
     palavra = random.choice(palavras)
 
-    print(palavra)
+    #Criar uma lista vazia para armazenar as letras adivinhadas
+    letras_advinhadas = [' _ ' for letra in palavra]
 
-    letras_descobertas = ['_' for letra in palavra]
-
+    #Definir o número máximo de tentativas permitidas
     chances = len(palavra)
 
     letras_erradas = []
-
+    
     while chances > 0:
-        print(" ".join(letras_descobertas))
-        print("\nChances restantes", chances)
-        print("Letras erradas", " ".join(letras_erradas))
 
-        tentativa = input("Digite uma letra: ").lower()
+        print("".join(letras_advinhadas),"\n")
+        print("Chances restantes: ", chances)
 
-        if tentativa in palavra:
-            index = 0
+        letraTentada = input("Digite uma letra\n")
+
+        if(letraTentada in palavra):
             
+            index = 0
+
             for letra in palavra:
+                if letraTentada == letra:
+                    letras_advinhadas[index] = letra
+                index = index + 1    
+                resposta = ''.join(letras_advinhadas)
                 
-                if tentativa == letra: 
-                    letras_descobertas[index] = letra
-                index+= 1
-
-            else:
-                chances -= 1 
-                letras_erradas.append(tentativa)
-
-                print(letras_descobertas)
+                if resposta == palavra:
+                    print("Você venceu!")
+                    break 
+                
+        else:
+            chances = chances - 1
+            letras_erradas.append(letraTentada)
+            print("Letra incorreta\n")
+        
+    else:
+        print("Você perdeu!\n")
+        print("A plavra era", palavra)    
 
 game()

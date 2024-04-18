@@ -1,23 +1,23 @@
 
-1- Definir a lista de palavras possíveis
+1- Definir a lista de palavras possíveis (Feito)
 
-2- Escolher uma palavra aleatória da lista
+2- Escolher uma palavra aleatória da lista (Feito)
 
-3- Criar uma lista vazia para armazenar as letras adivinhadas
+3- Criar uma lista vazia para armazenar as letras adivinhadas (Feito)
 
-4- Definir o número máximo de tentativas permitidas
+4- Definir o número máximo de tentativas permitidas (Feito)
 
 5- Enquanto o número de tentativas não atingir o limite máximo:
 
-a. Mostrar a palavra como uma série de underscores, com as letras adivinhadas preenchidas nos espaços corretos
+a. Mostrar a palavra como uma série de underscores, com as letras adivinhadas preenchidas nos espaços corretos (Feito)
 
-b. Pedir ao jogador que adivinhe uma letra
+b. Pedir ao jogador que adivinhe uma letra (Feito)
 
-c. Verificar se a letra adivinhada está na palavra
+c. Verificar se a letra adivinhada está na palavra (Feito)
 
-d. Se a letra adivinhada está na palavra, adicionar a letra à lista de letras adivinhadas e atualizar a exibição da palavra
+d. Se a letra adivinhada está na palavra, adicionar a letra à lista de letras adivinhadas e atualizar a exibição da palavra (Feito)
 
-e. Se a letra adivinhada não está na palavra, reduzir o número de tentativas restantes e exibir a mensagem "Letra incorreta. Tentativas restantes: [número de tentativas restantes]"
+e. Se a letra adivinhada não está na palavra, reduzir o número de tentativas restantes e exibir a mensagem "Letra incorreta. Tentativas restantes: [número de tentativas restantes]" (Feito)
 
 f. Verificar se todas as letras da palavra foram adivinhadas
 
